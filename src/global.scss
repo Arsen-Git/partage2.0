@@ -1,0 +1,35 @@
+.sectionTitle {
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 120%;
+  /* identical to box height, or 46px */
+
+  text-transform: capitalize;
+
+  /* White */
+
+  color: #ffffff;
+}
+.sectionSubtitle {
+  margin-bottom: 60px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 160%;
+  /* or 35px */
+
+  text-transform: capitalize;
+
+  /* White */
+
+  color: #ffffff;
+}
+.sectionList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}

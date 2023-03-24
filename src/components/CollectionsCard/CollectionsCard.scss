@@ -1,0 +1,72 @@
+.collectionCard {
+  border-radius: 20px;
+  max-width: 330px;
+  max-height: 525px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &__mainImg {
+    border-radius: 20px;
+    max-width: 330px;
+    max-height: 330px;
+  }
+  .imgs {
+    display: flex;
+    gap: 15px;
+    img {
+      border-radius: 20px;
+      width: 100px;
+      height: 100px;
+    }
+    .addMore {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+
+      background: #3b3b3b;
+      border: 2px solid #c7f000;
+      border-radius: 20px;
+      &__text {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 160%;
+        /* or 35px */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #ffffff;
+      }
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    /* identical to box height, or 31px */
+
+    text-transform: capitalize;
+
+    color: #ffffff;
+  }
+  &__footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    color: #ffffff;
+  }
+}

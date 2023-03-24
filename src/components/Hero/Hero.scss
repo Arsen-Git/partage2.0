@@ -1,0 +1,77 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 80px 115px;
+  &__left {
+    .hero__title {
+      font-weight: 600;
+      font-size: 67px;
+      line-height: 110%;
+      /* or 74px */
+      text-transform: capitalize;
+
+      /* White */
+
+      color: #ffffff;
+    }
+    .hero__subtitle {
+      margin-top: 80px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 160%;
+      /* or 35px */
+
+      text-transform: capitalize;
+
+      /* White */
+
+      color: #ffffff;
+    }
+    .hero__btn {
+      cursor: pointer;
+      display: flex;
+
+      margin-top: 30px;
+      padding: 19px 50px;
+      border: none;
+      background: linear-gradient(
+        128.15deg,
+        #c7f000 121.18%,
+        #a259ff 136.56%,
+        #377df7 136.56%
+      );
+      border-radius: 20px;
+
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      /* or 22px */
+
+      text-align: center;
+
+      color: #3b3b3b;
+      &::before {
+        content: url(../../../public/images/Rocket.svg);
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+      }
+    }
+  }
+  &__right {
+    width: 510px;
+    height: 510px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
