@@ -11,6 +11,10 @@
   /* White */
 
   color: #ffffff;
+  @media screen and (max-width: 1024px) {
+    font-size: 28px;
+    line-height: 140%;
+  }
 }
 .sectionSubtitle {
   margin-bottom: 60px;
@@ -25,6 +29,11 @@
   /* White */
 
   color: #ffffff;
+  @media screen and (max-width: 1024px) {
+    max-width: 350px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
 }
 .sectionList {
   display: flex;
@@ -32,4 +41,60 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
+}
+.sectionInput__wrapper {
+  &-disabled {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-radius: 20px;
+}
+.sectionInput {
+  border-radius: 20px;
+  padding: 19px 1px 19px 20px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+
+  /* Background */
+
+  color: #2b2b2b;
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 19px 50px;
+    background: #c7f000;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    text-align: center;
+
+    color: #3b3b3b;
+    &::before {
+      content: url(../public/images/mail.svg);
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+    }
+    &-orange {
+      background: #e98c00;
+    }
+  }
 }

@@ -8,11 +8,10 @@
 }
 .creators__btn {
   background-color: #2b2b2b;
-  bottom: 140px;
-  right: 115px;
 
   cursor: pointer;
   display: flex;
+  align-items: center;
 
   padding: 19px 50px;
 
@@ -33,5 +32,8 @@
     width: 20px;
     height: 20px;
     margin-right: 12px;
+  }
+  @media screen and (max-width: 650px) {
+    display: none;
   }
 }

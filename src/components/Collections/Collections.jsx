@@ -18,14 +18,6 @@ export default function Collections() {
       title: "{Insert title}",
       creator: "{Insert creator}",
     },
-    {
-      mainImg: "./images/chess.png",
-      img2: "./images/chess.png",
-      img3: "./images/chess.png",
-      accImg: "./images/User.svg",
-      title: "{Insert title}",
-      creator: "{Insert creator}",
-    },
   ];
   return (
     <section className="container">
@@ -34,8 +26,9 @@ export default function Collections() {
         Checkout our weekly updated trending collection.
       </h2>
       <ul className="sectionList">
-        {cards.map((card) => (
+        {cards.map((card, index) => (
           <CollectionsCard
+            key={index}
             mainImg={card.mainImg}
             img2={card.img2}
             img3={card.img3}

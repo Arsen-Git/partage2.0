@@ -6,6 +6,12 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media screen and (max-width: 450px) {
+    max-width: 315px;
+  }
+  @media screen and (max-width: 350px) {
+    max-width: 280px;
+  }
   &__mainImg {
     border-radius: 20px;
     max-width: 330px;
@@ -14,10 +20,17 @@
   .imgs {
     display: flex;
     gap: 15px;
+    @media screen and (max-width: 350px) {
+      gap: 5px;
+    }
     img {
       border-radius: 20px;
       width: 100px;
       height: 100px;
+      @media screen and (max-width: 350px) {
+        width: 90px;
+        height: 90px;
+      }
     }
     .addMore {
       cursor: pointer;
@@ -57,7 +70,7 @@
   }
   &__footer {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 12px;
   }

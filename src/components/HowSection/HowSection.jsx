@@ -24,8 +24,13 @@ export default function HowSection() {
       <h2 className="sectionTitle">How it works</h2>
       <h2 className="sectionSubtitle">Find out how to get started</h2>
       <ul className="sectionList">
-        {cards.map((card) => (
-          <HowCard img={card.img} title={card.title} text={card.text} />
+        {cards.map((card, index) => (
+          <HowCard
+            key={index}
+            img={card.img}
+            title={card.title}
+            text={card.text}
+          />
         ))}
       </ul>
     </section>

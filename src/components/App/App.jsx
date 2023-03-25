@@ -3,6 +3,8 @@ import Hero from "../Hero/Hero";
 import HowSection from "../HowSection/HowSection";
 import Creators from "../Creators/Creators";
 import Collections from "../Collections/Collections";
+import Form from "../Form/Form";
+import Footer from "../Footer/Footer";
 
 export default function App() {
   return (
@@ -12,6 +14,8 @@ export default function App() {
       <HowSection />
       <Creators />
       <Collections />
+      <Form />
+      <Footer />
     </>
   );
 }

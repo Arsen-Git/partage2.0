@@ -10,6 +10,11 @@ export default function Creators() {
       title: "Tare",
       sales: "00.00",
     },
+    {
+      img: "./images/Creators.png",
+      title: "Tare",
+      sales: "34.12",
+    },
   ];
   return (
     <section className="container">
@@ -17,14 +22,19 @@ export default function Creators() {
         <div className="upper__left">
           <h2 className="sectionTitle">Top Creators</h2>
           <h2 className="sectionSubtitle">
-            Checkout Top Rated Clients on Our Marketplace
+            Checkout Top Rated Creators on the NFT Marketplace
           </h2>
         </div>
         <button className="creators__btn">View Rankings</button>
       </div>
       <ul className="sectionList">
-        {cards.map((card) => (
-          <CreatorsCard img={card.img} title={card.title} sales={card.sales} />
+        {cards.map((card, index) => (
+          <CreatorsCard
+            key={index}
+            img={card.img}
+            title={card.title}
+            sales={card.sales}
+          />
         ))}
       </ul>
     </section>
