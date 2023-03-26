@@ -4,15 +4,18 @@ export default function Timer() {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
-  const [total, setTotal] = useState(0);
   const [deadline, setDeadline] = useState("2023-04-10");
+  const [end, setEnd] = useState(false);
 
   const getTimeRemaining = useCallback((deadline) => {
     let t = Date.parse(deadline) - Date.parse(new Date());
+    if (t <= 0) {
+      setEnd(true);
+      return;
+    }
     let seconds = Math.floor((t / 1000) % 60);
     let minutes = Math.floor((t / 1000 / 60) % 60);
     let hours = Math.floor(t / (1000 * 60 * 60));
-    setTotal(t);
     setHours(hours);
     setMinutes(minutes);
     setSeconds(seconds);
@@ -21,11 +24,11 @@ export default function Timer() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       getTimeRemaining(deadline);
-      if (total < 0) {
+      if (end) {
         clearInterval(intervalId);
       }
     }, 1000);
-  }, []);
+  }, [end]);
 
   return (
     <div className="collection__about__auction">
@@ -54,7 +57,15 @@ export default function Timer() {
           <p className="collection__about__auction__text">Seconds</p>
         </div>
       </div>
-      <div className="collection__about__auction__btn">Place Bid</div>
+      <div
+        className={
+          end
+            ? "collection__about__auction__btn-dis collection__about__auction__btn"
+            : "collection__about__auction__btn"
+        }
+      >
+        Place Bid
+      </div>
     </div>
   );
 }
