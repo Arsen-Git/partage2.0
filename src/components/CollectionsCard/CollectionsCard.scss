@@ -1,4 +1,10 @@
 .collectionCard {
+  transition: transform 0.1s linear;
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  cursor: pointer;
   border-radius: 20px;
   max-width: 330px;
   max-height: 525px;
@@ -33,7 +39,6 @@
       }
     }
     .addMore {
-      cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;

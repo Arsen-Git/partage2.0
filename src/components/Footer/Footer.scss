@@ -38,6 +38,10 @@
       }
     }
     .footer__text {
+      transition: transform 0.1s linear;
+      &:hover {
+        transform: scale(1.05);
+      }
       cursor: pointer;
       margin-bottom: 20px;
       font-style: normal;

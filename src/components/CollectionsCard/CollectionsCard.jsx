@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./CollectionsCard.scss";
 
 export default function CollectionsCard({
@@ -7,22 +9,25 @@ export default function CollectionsCard({
   title,
   accImg,
   creator,
+  id,
 }) {
   return (
-    <div className="collectionCard">
-      <img className="collectionCard__mainImg" src={mainImg} alt="img" />
-      <div className="imgs">
-        <img src={img2} alt="img2" />
-        <img src={img3} alt="img3" />
-        <div className="addMore">
-          <p className="addMore__text">1025+</p>
+    <Link to={`/${id}`}>
+      <div className="collectionCard">
+        <img className="collectionCard__mainImg" src={mainImg} alt="img" />
+        <div className="imgs">
+          <img src={img2} alt="img2" />
+          <img src={img3} alt="img3" />
+          <div className="addMore">
+            <p className="addMore__text">1025+</p>
+          </div>
+        </div>
+        <h2 className="collectionCard__title">{title}</h2>
+        <div className="collectionCard__footer">
+          <img width={24} height={24} src={accImg} alt="acc" />
+          <p className="collectionCard__text">{creator}</p>
         </div>
       </div>
-      <h2 className="collectionCard__title">{title}</h2>
-      <div className="collectionCard__footer">
-        <img width={24} height={24} src={accImg} alt="acc" />
-        <p className="collectionCard__text">{creator}</p>
-      </div>
-    </div>
+    </Link>
   );
 }

@@ -1,4 +1,8 @@
 .card {
+  transition: transform 0.1s linear;
+  &:hover {
+    transform: scale(1.05);
+  }
   box-sizing: border-box;
   padding: 10px 40px 30px;
   max-width: 330px;

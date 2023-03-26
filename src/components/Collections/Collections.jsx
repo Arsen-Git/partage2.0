@@ -9,6 +9,7 @@ export default function Collections() {
       accImg: "./images/Collection-acc.svg",
       title: "Tare x Hokusai Series ",
       creator: "Tare",
+      id: 1034562,
     },
     {
       mainImg: "./images/chess.png",
@@ -17,6 +18,16 @@ export default function Collections() {
       accImg: "./images/chess.png",
       title: "{Insert title}",
       creator: "{Insert creator}",
+      id: 1000000,
+    },
+    {
+      mainImg: "./images/chess.png",
+      img2: "./images/chess.png",
+      img3: "./images/chess.png",
+      accImg: "./images/chess.png",
+      title: "{Insert title}",
+      creator: "{Insert creator}",
+      id: 1000000,
     },
   ];
   return (
@@ -35,6 +46,7 @@ export default function Collections() {
             accImg={card.accImg}
             title={card.title}
             creator={card.creator}
+            id={card.id}
           />
         ))}
       </ul>
