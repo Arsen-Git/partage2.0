@@ -3,6 +3,7 @@ import Footer from "../components/Footer/Footer";
 import CollectioPageCard from "../components/CollectionPageCard/CollectionPageCard";
 
 import "./CollectionPage.scss";
+import Timer from "../components/Timer/Timer";
 
 export default function CollectionPage() {
   const cards = [
@@ -60,11 +61,15 @@ export default function CollectionPage() {
               <p className="collection__about__topic__title">Details</p>
               <div className="collection__about__topic__group">
                 <img src="./images/Globe.svg" alt="logo" />
-                <p className="collection__about__topic__text">View on ...</p>
+                <a href="#" className="collection__about__topic__text">
+                  View on ...
+                </a>
               </div>
               <div className="collection__about__topic__group">
                 <img src="./images/Globe.svg" alt="logo" />
-                <p className="collection__about__topic__text">View ...</p>
+                <a href="#" className="collection__about__topic__text">
+                  View ...
+                </a>
               </div>
             </div>
             <div className="collection__about__topic">
@@ -88,30 +93,7 @@ export default function CollectionPage() {
             </div>
           </div>
         </div>
-        <div className="collection__about__auction">
-          <p className="collection__about__auction__text">Auction ends in:</p>
-          <div className="collection__about__auction__timer">
-            <div className="collection__about__auction__time">
-              <h2 className="collection__about__auction__time__number">00</h2>
-              <p className="collection__about__auction__text">Hours</p>
-            </div>
-            <div className="collection__about__auction__time">
-              <h2 className="collection__about__auction__time__number">:</h2>
-            </div>
-            <div className="collection__about__auction__time">
-              <h2 className="collection__about__auction__time__number">00</h2>
-              <p className="collection__about__auction__text">Minutes</p>
-            </div>
-            <div className="collection__about__auction__time">
-              <h2 className="collection__about__auction__time__number">:</h2>
-            </div>
-            <div className="collection__about__auction__time">
-              <h2 className="collection__about__auction__time__number">00</h2>
-              <p className="collection__about__auction__text">Seconds</p>
-            </div>
-          </div>
-          <div className="collection__about__auction__btn">Place Bid</div>
-        </div>
+        <Timer />
       </section>
       <section className="collection__container collection__cards">
         <div className="collection__cards__upper">
