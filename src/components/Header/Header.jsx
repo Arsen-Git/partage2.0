@@ -20,7 +20,9 @@ export default function Header() {
         </div>
       </header>
       <header className="head__mobile">
-        <img src="./images/head-mobile-logo.png" alt="logo" />
+        <Link to={`/`}>
+          <img src="./images/head-mobile-logo.png" alt="logo" />
+        </Link>
         <div onClick={onToggleMenu} className="burger">
           <div className="burger__line"></div>
           <div className="burger__line burger__line-long"></div>
@@ -32,7 +34,9 @@ export default function Header() {
             <div className="mobMenu__close__line"></div>
           </div>
           <ul className="mobMenu__list">
-            <li className="mobMenu__item">Marketplace</li>
+            <Link to={`/`}>
+              <li className="mobMenu__item">Marketplace</li>
+            </Link>
             <div className="mobMenu__btn">
               <img width={20} height={20} src="./images/User.svg" alt="user" />
               <p className="head__account__text">Sign Up</p>
