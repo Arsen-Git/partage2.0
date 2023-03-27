@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import "./Header.scss";
+import "../../global.scss";
 
 export default function Header() {
   const onToggleMenu = () => {
